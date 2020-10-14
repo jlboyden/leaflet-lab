@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		
+		 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   			integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   			crossorigin=""/>
+			   
+		<!-- Make sure you put this AFTER Leaflet's CSS -->
+		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+		crossorigin=""></script>
+		
+   
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="keywords" content="maps, cartography" />
+		
+		<!--stylesheets-->
+		<link rel="stylesheet" href="css/leaflet.css">
+		<link rel="stylesheet" href="css/style.css">
+		
+		<title>Julie Boyden</title>
+				<!--scripts-->
+		<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+		<script type="text/javascript" src="js/leaflet-src.js"></script>
+		<script type="text/javascript" src="js/leaflet.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/states_temp.js"></script>
+
+		
+	</head>
+	<body>
+		<nav class="navbar navbar-secondary">
+			<h1>Julie<br /> Boyden</h1>
+		</nav>
+		<div class="content-container">
+			
+			<div class="header-container">
+					<h2 id="title">Average Temperature in September Per State for Years 2013 - 2020</h2>
+      		  </div>
+		  
+	      <body>
+
+        <div class="map-text">
+
+
+          <div class="text-container">
+              <p>
+                  Temperature changes year to year are a big topic of conversation in the U.S.. Are they <b>rising</b> or <b>falling</b> on average? The symbols outlined in red represent <b><org style="background-color: red">states with a higher average temperature</org></b> for the month of September.
+              <p>
+                  The <b><org style="background-color: steelblue">states with a lower average temperature</org></b> in September are displayed in blue. </p>
+				  
+			  <p>
+                  All temperature data is determined by <a href="https://www.ncdc.noaa.gov/cag/statewide/mapping/110/tavg/202009/9" target="_blank">The National Centers for Environmental Information</a>.
+              </p>
+				  
+          </div>
+          <div id="map"></div>
+
+        </div>
+
+        </div>
+      </body>
+
+    <footer>
+        <p>
+            Contact <a href="mailto:julielboyden@gmail.com">julielboyden@gmail.com</a>
+        </p>
+    </footer>
