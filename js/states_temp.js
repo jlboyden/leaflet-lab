@@ -25,7 +25,7 @@ function createMap() {
 
 function createPopup(properties, attribute, layer, radius) {
     var panelContent = "<p><b>State:</b>" + " " + properties.desc + "</p>";
-    var year = attribute.split("_")[1];
+    var year = attribute;
     //concoct with additional text
     panelContent += "<p><b>Temperature in " + year + ": </b>" + properties[attribute] + " " + "ppb</p>";
     layer.bindPopup(panelContent, {
@@ -194,7 +194,7 @@ function createLegend(map, attributes) {
 
 function updateLegend(map, attribute) {
     //add content to legend
-    var year = attribute.split("_")[1];
+    var year = attribute;
     var content = "Temperature in " + year;
     $('#temporal-legend').html(content);
 
@@ -275,8 +275,8 @@ function createSequenceControls(map, attributes) {
     });
     //add forward, backward arrows with icons
 
-    $('#reverse').html('<img src="images/left.png"">');
-    $('#forward').html('<img src="images/right.png">');
+    $('#reverse').html('<img src="img/left.png"">');
+    $('#forward').html('<img src="img/right.png">');
     //click event listener
     $('.skip').click(function() {
         var index = $('.range-slider').val();
@@ -306,13 +306,13 @@ function createSequenceControls(map, attributes) {
 };
 
 //ajax callback function to get data from geojson
-    $.getJSON("data/states_avg_temp.geojson")    
+    $.getJSON("data/states_avg_temp.geojson")
         .done(function(data) {
             console.log(data);
         })
     .fail(function() { alert("There has been a problem loading the data.")});
 
-    
+
 //ajax callback function to get data from geojson
 function getData(map) {
     $.ajax("data/states_avg_temp.geojson", {
